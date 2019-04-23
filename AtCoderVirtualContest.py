@@ -14,7 +14,8 @@ class Problem:
         names = parsed.path.split('/')
         self.contest = names[2]
         self.task = names[4]
-        self.url = __atcoder_url__+f'/contests/{self.contest}'
+        self.url = url
+        self.contest_url = __atcoder_url__+f'/contests/{self.contest}'
         print(self.url)
 
 class Contest:
@@ -55,7 +56,7 @@ class Contest:
             for problem in self.problems:
                 task = problem.task
                 if self.states[p][task]['status'] == False:
-                    subl = acs.submissions(problem.url, task, p)
+                    subl = acs.submissions(problem.contest_url, task, p)
                     subl = list(filter(lambda s:s['time'].astimezone() > self.start_time and s['status'] == 'AC', subl))
                     if len(subl) > 0:
                         s = subl[0]
