@@ -1,4 +1,4 @@
-import AtCoderSubmission as acs
+import libavc.AtCoderSubmission as acs
 import urllib
 import requests
 import datetime
