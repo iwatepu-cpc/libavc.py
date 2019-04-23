@@ -10,7 +10,7 @@ with open('README.md') as f:
 
 setuptools.setup(
     name='libavc.py',
-    author="tamamu"
+    author="tamamu",
     url='https://github.com/iwatepu-cpc/libavc.py',
     version=0.1.0,
     packages=setuptools.find_packages(),
