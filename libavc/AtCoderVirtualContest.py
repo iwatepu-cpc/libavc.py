@@ -37,7 +37,7 @@ class Contest:
             self.participants.append(atcoder_id)
             self.states[atcoder_id] = {}
             if self.problems != None and self.start_time != None:
-                self.states[p] = {problem.task:{
+                self.states[atcoder_id] = {problem.task:{
                     'status': False,
                     'time': None,
                     'lang': None
