@@ -23,7 +23,7 @@ class Contest:
         self.participants = []
         self.problems = problems
         self.start_time = None
-        self.states = None
+        self.states = {}
 
     def __exists_user(username):
         url = __atcoder_url__ + f'/users/{username}'
@@ -35,6 +35,13 @@ class Contest:
     def participate(self, atcoder_id):
         if Contest.__exists_user(atcoder_id):
             self.participants.append(atcoder_id)
+            self.states[atcoder_id] = {}
+            if self.problems != None and self.start_time != None:
+                self.states[p] = {problem.task:{
+                    'status': False,
+                    'time': None,
+                    'lang': None
+                } for problem in self.problems}
             return True
         else:
             return False

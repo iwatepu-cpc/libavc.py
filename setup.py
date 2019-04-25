@@ -12,7 +12,7 @@ setuptools.setup(
     name='libavc.py',
     author="tamamu",
     url='https://github.com/iwatepu-cpc/libavc.py',
-    version='0.1.3',
+    version='0.1.4',
     packages=['libavc'],
     license='MIT',
     description='AtCoder Virtual Contest Library for Python',
